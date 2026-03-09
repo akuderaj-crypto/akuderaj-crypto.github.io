@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Travel Guide</title>
+    <title>Local Food</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .food-grid img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; }
+    </style>
 </head>
 <body>
-    <header><h1>How to Reach</h1></header>
+    <header><h1>Local Flavors</h1></header>
     <nav>
         <a href="index.html">Home</a><a href="places.html">Places</a>
         <a href="culture.html">Culture</a><a href="travel.html">Travel Guide</a>
@@ -14,9 +18,13 @@
     </nav>
     <div class="container">
         <section class="card">
-            <h2>Transportation</h2>
-            <img src="images/railway_station.jpg" alt="Solapur Junction" style="width:100%; border-radius:10px;">
-            <p>Solapur is a major railway junction connecting Mumbai, Pune, and Bengaluru[cite: 60].</p>
+            <h2>Famous Dishes</h2>
+            <div class="food-grid">
+                <div><img src="images/bhakri.jpg" alt="Jowar Bhakri"><p>Jowar Bhakri [cite: 76]</p></div>
+                <div><img src="images/shenga_chutney.jpg" alt="Peanut Chutney"><p>Shenga Chutney [cite: 78]</p></div>
+                <div><img src="images/misal_pav.jpg" alt="Misal Pav"><p>Misal Pav [cite: 81]</p></div>
+                <div><img src="images/puran_poli.jpg" alt="Puran Poli"><p>Puran Poli [cite: 83]</p></div>
+            </div>
         </section>
     </div>
 </body>
