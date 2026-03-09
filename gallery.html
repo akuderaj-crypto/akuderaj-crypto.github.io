@@ -2,58 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery - Solapur Tourism</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .gallery-item {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid var(--accent);
+        }
+        .gallery-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Solapur Photo Gallery</h1>
+        <p>A Visual Journey Through History and Spirituality</p>
+    </header>
     <nav>
         <a href="index.html">Home</a>
         <a href="places.html">Places</a>
-        <a href="gallery.html">Gallery</a>
         <a href="culture.html">Culture</a>
         <a href="travel.html">Travel Guide</a>
         <a href="food.html">Food</a>
+        <a href="gallery.html">Gallery</a>
     </nav>
-
-    <main>
-        <h1>Solapur Photo Gallery</h1>
-        <p>Explore the visual heritage of Solapur and its surrounding pilgrimage sites[cite: 4, 12].</p>
-        
+    <div class="container">
         <div class="gallery-container">
             <div class="gallery-item">
                 <img src="images/siddeshwar.jpg" alt="Siddheshwar Temple">
-                <p>Siddheshwar Temple [cite: 14]</p>
+                <p>Siddheshwar Temple</p>
             </div>
             <div class="gallery-item">
-                <img src="images/siddeshwar_night.jpg" alt="Siddheshwar Temple at Night">
-                <p>Siddheshwar Temple - Night View [cite: 16]</p>
+                <img src="images/siddeshwar_night.jpg" alt="Siddheshwar Temple Night">
+                <p>Temple Night View</p>
             </div>
             <div class="gallery-item">
-                <img src="images/pandharpur1.jpg" alt="Pandharpur 1">
-                <p>Pandharpur Spiritual Center [cite: 18]</p>
+                <img src="images/pandharpur1.jpg" alt="Pandharpur Temple">
+                <p>Pandharpur Darshan</p>
             </div>
             <div class="gallery-item">
-                <img src="images/pandharpur2.jpg" alt="Pandharpur 2">
-                <p>Vitthal Rukmini Temple [cite: 20]</p>
+                <img src="images/pandharpur2.jpg" alt="Pandharpur Temple View">
+                <p>Vitthal Rukmini Temple</p>
             </div>
             <div class="gallery-item">
-                <img src="images/tuljapur1.jpg" alt="Tuljapur 1">
-                <p>Tuljapur Heritage Site</p>
+                <img src="images/tuljapur1.jpg" alt="Tuljapur Temple">
+                <p>Tulja Bhavani Temple</p>
             </div>
             <div class="gallery-item">
-                <img src="images/tuljapur2.jpg" alt="Tuljapur 2">
-                <p>Tuljapur Architecture</p>
+                <img src="images/tuljapur2.jpg" alt="Tuljapur Architecture">
+                <p>Tuljapur Heritage</p>
             </div>
             <div class="gallery-item">
-                <img src="images/tuljapur3.jpg" alt="Tuljapur 3">
-                <p>Tuljapur Temple Complex</p>
+                <img src="images/tuljapur3.jpg" alt="Tuljapur Entrance">
+                <p>Spiritual Tuljapur</p>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Solapur Tourism Portal</p>
-    </footer>
+    </div>
+    <footer><p>&copy; 2026 Solapur Tourism Guide</p></footer>
 </body>
 </html>
