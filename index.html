@@ -3,55 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Solapur | Historic City</title>
+    <title>Welcome to Solapur</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="culture.html">Culture</a>
+        <a href="travel.html">Travel Guide</a>
+        <a href="food.html">Food</a>
+    </nav>
+
+    <header class="hero">
         <h1>Welcome to Solapur</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="places.html">Places</a>
-            <a href="culture.html">Culture</a>
-            <a href="travel.html">Travel Guide</a>
-            <a href="food.html">Food</a>
-        </nav>
+        <p>Experience Spirituality, History, and Vibrant Culture</p>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <h2>Explore the Spiritual & Cultural Heart of Maharashtra</h2>
-            <p>Solapur is a historic and culturally rich city located in the southern part of Maharashtra, close to the borders of Karnataka and Telangana. The city is known for its spiritual centers, historic monuments, traditional festivals, and vibrant culture[cite: 4].</p>
-        </section>
-
-        <section class="intro-content">
-            <h3>A Legacy of Centuries</h3>
-            <p>For centuries, Solapur has been an important destination for pilgrims and travelers[cite: 5]. Many famous spiritual places such as Siddheshwar Temple, Pandharpur, and Akkalkot are located in and around the city, attracting millions of devotees every year[cite: 6, 7].</p>
-            <p>Apart from spirituality, Solapur has a strong cultural identity, well known for traditional textiles like Solapur chaddars and towels[cite: 8, 9].</p>
+    <main>
+        <section class="intro-grid">
+            <div>
+                <h2>Discover the Gateway to Spirituality</h2>
+                <p>Solapur is a historic city in southern Maharashtra, known for its spiritual centers and vibrant traditions[cite: 3, 4]. It serves as a gateway to several major pilgrimage destinations[cite: 11].</p>
+            </div>
+            <div class="image-row">
+                <img src="images/siddeshwar.jpg" alt="Siddheshwar Temple" class="side-img">
+                <img src="images/pandharpur1.jpg" alt="Pandharpur Temple" class="side-img">
+            </div>
         </section>
 
         <section class="enquiry-section">
-            <h3>Plan Your Visit</h3>
-            <p>Interested in visiting? Fill out our quick form below.</p>
-            <form id="enquiryForm">
-                <input type="text" id="visitorName" placeholder="Your Name" required>
-                <input type="email" id="visitorEmail" placeholder="Your Email" required>
-                <select id="interest">
-                    <option value="Spirituality">Spirituality & Temples</option>
-                    <option value="History">History & Forts</option>
-                    <option value="Textiles">Textiles & Shopping</option>
-                    <option value="Food">Regional Cuisine</option>
-                </select>
-                <button type="submit">Submit Inquiry</button>
-            </form>
-            <div id="formResponse"></div>
+            <h2>Start Your Journey</h2>
+            <button onclick="openEnquiry()">Inquire Now</button>
         </section>
     </main>
 
-    <footer>
-        <p>Solapur Tourism Guide - Experience the blend of spirituality, history, and local traditions[cite: 10, 12].</p>
-    </footer>
+    <footer><p>&copy; 2026 Solapur Tourism Portal</p></footer>
+    <script src="enquiry.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Solapur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="culture.html">Culture</a>
+        <a href="travel.html">Travel Guide</a>
+        <a href="food.html">Food</a>
+    </nav>
 
+    <header class="hero">
+        <h1>Welcome to Solapur</h1>
+        <p>Experience Spirituality, History, and Vibrant Culture</p>
+    </header>
+
+    <main>
+        <section class="intro-grid">
+            <div>
+                <h2>Discover the Gateway to Spirituality</h2>
+                <p>Solapur is a historic city in southern Maharashtra, known for its spiritual centers and vibrant traditions[cite: 3, 4]. It serves as a gateway to several major pilgrimage destinations[cite: 11].</p>
+            </div>
+            <div class="image-row">
+                <img src="images/siddeshwar.jpg" alt="Siddheshwar Temple" class="side-img">
+                <img src="images/pandharpur1.jpg" alt="Pandharpur Temple" class="side-img">
+            </div>
+        </section>
+
+        <section class="enquiry-section">
+            <h2>Start Your Journey</h2>
+            <button onclick="openEnquiry()">Inquire Now</button>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 Solapur Tourism Portal</p></footer>
     <script src="enquiry.js"></script>
 </body>
 </html>
