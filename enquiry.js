@@ -1,16 +1,14 @@
 document.getElementById('enquiryForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const name = document.getElementById('visitorName').value;
-    const interest = document.getElementById('interest').value;
-    const responseDiv = document.getElementById('formResponse');
+    const name = document.getElementById('userName').value;
+    const email = document.getElementById('userEmail').value;
+    const dest = document.getElementById('destination').value;
 
-    // Simulating a response for the tourist
-    responseDiv.innerHTML = `<p style="color: #e64a19; font-weight: bold; margin-top: 15px;">
-        Thank you, ${name}! We have received your inquiry about ${interest}. 
-        Our Solapur travel guide team will contact you soon with more details about our local traditions and regional cuisine!
-    </p>`;
-
-    // Clear form
-    document.getElementById('enquiryForm').reset();
+    if(name && email) {
+        alert(`Thank you, ${name}! We have received your enquiry regarding ${dest || 'Solapur'}. We will contact you at ${email} shortly.`);
+        this.reset();
+    } else {
+        alert("Please fill in the required fields.");
+    }
 });
