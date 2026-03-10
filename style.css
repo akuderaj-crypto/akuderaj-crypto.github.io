@@ -1,202 +1,153 @@
-/* style.css - Sunset Heritage Theme */
+/* style.css - Royal Textile & Stone Theme */
 :root {
-    --royal-purple: #4A148C;    /* Spiritual & Royal Depth */
-    --deep-orange: #E64A19;     /* Cultural Energy */
-    --marigold: #FFB300;        /* Festive & Textile Accent */
-    --silk-white: #FCF8F2;      /* Background Parchment */
-    --charcoal: #2D2D2D;        /* Readable Text */
-    --shadow: rgba(0, 0, 0, 0.15);
+    /* Color Palette */
+    --regal-indigo: #303F9F;    /* Depth of spiritual heritage */
+    --warm-saffron: #FBC02D;    /* Festive energy of the Yatra */
+    --terracotta: #D84315;      /* Earthy fort stones & spicy food */
+    --silk-cream: #FFFDE7;      /* Soft handloom texture background */
+    --deep-charcoal: #212121;   /* Modern readability */
+    --glass-white: rgba(255, 255, 255, 0.9);
+    --transition-speed: 0.4s;
 }
 
+/* Global Reset & Typography */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    transition: all 0.3s ease;
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--silk-white);
-    color: var(--charcoal);
-    margin: 0;
-    line-height: 1.7;
+    font-family: 'Garamond', 'Georgia', serif; /* Classic, historic feel */
+    background-color: var(--silk-cream);
+    color: var(--deep-charcoal);
+    line-height: 1.8;
+    overflow-x: hidden;
 }
 
-/* Navigation with a Gradient Bottom Border */
+/* Unique Animated Navigation */
 nav {
-    background-color: var(--royal-purple);
-    padding: 1rem 0;
+    background: var(--regal-indigo);
+    padding: 1.2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
     justify-content: center;
-    border-bottom: 4px solid var(--marigold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-nav a:hover, nav a.active {
-    color: var(--marigold);
-}
-
-/* Hero Section with Vibrant Gradient */
-header {
-    background: linear-gradient(135deg, var(--royal-purple) 0%, var(--deep-orange) 100%);
     color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Animated Underline Effect */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--warm-saffron);
+    transition: width var(--transition-speed);
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--warm-saffron);
+}
+
+/* Hero Section with Diagonal Cut */
+header {
+    background: linear-gradient(135deg, var(--regal-indigo) 20%, var(--terracotta) 100%);
+    color: white;
+    padding: 120px 20px;
     text-align: center;
-    padding: 80px 20px;
-    clip-path: ellipse(150% 100% at 50% 0%); /* Modern curved header */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    margin-bottom: 50px;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-style: italic;
+    font-size: 1.3rem;
     opacity: 0.9;
 }
 
-/* Content Layout */
+/* Container & Layout */
 .container {
-    max-width: 1100px;
-    margin: -40px auto 40px; /* Overlap with header */
-    padding: 0 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 25px;
 }
 
-/* Vibrant Cards */
+/* Glassmorphism Card Style */
 .card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 20px var(--shadow);
-    border-top: 5px solid var(--marigold);
+    background: var(--glass-white);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 2px; /* Sharp, architectural edges */
+    box-shadow: 15px 15px 0px var(--warm-saffron); /* Off-set shadow for unique look */
+    position: relative;
 }
 
 h2 {
-    color: var(--royal-purple);
-    border-bottom: 2px solid var(--silk-white);
-    padding-bottom: 10px;
-    margin-top: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--regal-indigo);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Gallery Grid */
+h2::before {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: var(--terracotta);
+}
+
+/* Interactive Gallery Grid */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    gap: 30px;
     margin-top: 20px;
 }
 
 .gallery-item {
-    background: white;
-    border-radius: 10px;
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 5px 15px var(--shadow);
+    height: 350px;
+    border: 8px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-}
-
-.gallery-item .caption {
-    padding: 15px;
-    background: var(--royal-purple);
-    color: white;
-    text-align: center;
-    font-weight: 500;
-}
-
-/* Form Styling */
-.enquiry-form {
-    display: grid;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: var(--royal-purple);
-}
-
-input, select, textarea {
-    padding: 12px;
-    border: 2px solid #eee;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: var(--deep-orange);
-}
-
-button {
-    background-color: var(--deep-orange);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 0 #BF360C;
-}
-
-button:hover {
-    background-color: #F4511E;
-    transform: translateY(-2px);
-}
-
-button:active {
-    transform: translateY(2px);
-    box-shadow: none;
-}
-
-/* Footer */
-footer {
-    background: var(--charcoal);
-    color: #999;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 60px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
-}
+.gallery-item
