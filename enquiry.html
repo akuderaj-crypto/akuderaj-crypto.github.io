@@ -2,45 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Solapur Tourism | Enquiry</title>
+    <title>Enquiry | Plan Your Trip</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="places.html">Places</a>
-        <a href="culture.html">Culture</a>
-        <a href="travel.html">Travel Guide</a>
-        <a href="food.html">Food</a>
-        <a href="enquiry.html">Enquiry</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="travel.html">Travel Guide</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="enquiry.html" class="active">Enquiry</a></li>
+        </ul>
     </nav>
-    <header><h1>Tourist Enquiry</h1></header>
-    <div class="container">
+
+    <main class="container">
+        <h1>Tourist Enquiry Form</h1>
         <div class="card">
             <form id="touristForm">
-                <label for="name">Full Name:</label>
+                <label for="name">Name:</label>
                 <input type="text" id="name" required>
                 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" required>
-                
-                <label for="interest">Primary Interest:</label>
+                <label for="interest">Main Interest:</label>
                 <select id="interest">
-                    <option value="spirituality">Spirituality & Temples</option>
-                    <option value="textiles">Textiles & Chaddars</option>
-                    <option value="history">History & Forts</option>
-                    <option value="food">Regional Cuisine</option>
+                    <option value="Spiritual">Spiritual Centers [cite: 4]</option>
+                    <option value="History">Historic Monuments [cite: 4]</option>
+                    <li><option value="Textiles">Textiles [cite: 9]</option></li>
+                    <option value="Food">Local Cuisine [cite: 10]</option>
                 </select>
                 
-                <label for="message">Your Message:</label>
-                <textarea id="message" rows="4"></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" placeholder="How can we help you plan your visit?"></textarea>
                 
                 <button type="submit">Submit Enquiry</button>
             </form>
-            <div id="status" style="margin-top:1rem; font-weight:bold;"></div>
+            <div id="status"></div>
         </div>
-    </div>
+    </main>
+
     <script src="enquiry.js"></script>
-    <footer>© 2026 Solapur Tourism</footer>
 </body>
 </html>
